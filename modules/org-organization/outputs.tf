@@ -23,9 +23,9 @@ output "plan" {
   value       = data.github_organization.this.plan
 }
 
-output "admins" {
-  description = "A list of the admins of the organization."
-  value       = var.admins
+output "owners" {
+  description = "A list of the owners of the organization."
+  value       = var.owners
 }
 
 output "members" {
@@ -46,9 +46,4 @@ output "repositories" {
 output "blocked_users" {
   description = "A list of blocked usernames from organization."
   value       = var.blocked_users
-}
-
-output "test" {
-  description = "The Node ID of the team."
-  value       = github_membership.this
 }

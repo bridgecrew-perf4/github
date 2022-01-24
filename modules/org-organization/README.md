@@ -37,15 +37,14 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_name"></a> [name](#input\_name) | (Required) The name of the organization. | `string` | n/a | yes |
-| <a name="input_admins"></a> [admins](#input\_admins) | (Optional) A list of usernames to add users as `admin` role. When applied, an invitation will be sent to the user to become admin of the organization. | `set(string)` | `[]` | no |
 | <a name="input_blocked_users"></a> [blocked\_users](#input\_blocked\_users) | (Optional) A list of usernames to block from organization. | `set(string)` | `[]` | no |
-| <a name="input_members"></a> [members](#input\_members) | (Optional) A list of usernames to add users as `member` role. When applied, an invitation will be sent to the user to become member of the organization. | `set(string)` | `[]` | no |
+| <a name="input_members"></a> [members](#input\_members) | (Optional) A list of usernames to add users as `member` role. When applied, an invitation will be sent to the user to become a member of the organization. | `set(string)` | `[]` | no |
+| <a name="input_owners"></a> [owners](#input\_owners) | (Optional) A list of usernames to add users as `admin` role. When applied, an invitation will be sent to the user to become an owner of the organization. | `set(string)` | `[]` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_admins"></a> [admins](#output\_admins) | A list of the admins of the organization. |
 | <a name="output_all_members"></a> [all\_members](#output\_all\_members) | A list of all members of the organization. |
 | <a name="output_blocked_users"></a> [blocked\_users](#output\_blocked\_users) | A list of blocked usernames from organization. |
 | <a name="output_description"></a> [description](#output\_description) | The description of the organization. |
@@ -53,7 +52,7 @@ No modules.
 | <a name="output_id"></a> [id](#output\_id) | The ID of the organization. |
 | <a name="output_members"></a> [members](#output\_members) | A list of the members of the organization. |
 | <a name="output_name"></a> [name](#output\_name) | The name of the organization. |
+| <a name="output_owners"></a> [owners](#output\_owners) | A list of the owners of the organization. |
 | <a name="output_plan"></a> [plan](#output\_plan) | The billing plan of the organization. |
 | <a name="output_repositories"></a> [repositories](#output\_repositories) | A list of the repositories of the organization. |
-| <a name="output_test"></a> [test](#output\_test) | The Node ID of the team. |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

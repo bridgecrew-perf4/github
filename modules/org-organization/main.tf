@@ -11,20 +11,19 @@ data "github_organization" "after" {
 }
 
 locals {
-  membership = concat(
-    [
-      for member in var.members : {
-        username = member
-        role     = "member"
-      }
-    ],
-    [
-      for admin in var.admins : {
-        username = admin
-        role     = "admin"
-      }
-    ]
-  )
+  members = [
+    for member in var.members : {
+      username = member
+      role     = "member"
+    }
+  ]
+  owners = [
+    for owner in var.owners : {
+      username = owner
+      role     = "admin"
+    }
+  ]
+  membership = concat(local.members, local.owners)
 }
 
 
