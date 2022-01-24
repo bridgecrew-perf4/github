@@ -52,8 +52,3 @@ output "members" {
   description = "A list of the members of the team."
   value       = var.members
 }
-
-output "test" {
-  description = "The Node ID of the team."
-  value       = github_team_membership.this
-}

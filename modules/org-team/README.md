@@ -58,5 +58,4 @@ No modules.
 | <a name="output_node_id"></a> [node\_id](#output\_node\_id) | The Node ID of the team. |
 | <a name="output_parent_id"></a> [parent\_id](#output\_parent\_id) | The ID of the parent team. |
 | <a name="output_slug"></a> [slug](#output\_slug) | The slug of the team. |
-| <a name="output_test"></a> [test](#output\_test) | The Node ID of the team. |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

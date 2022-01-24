@@ -5,3 +5,7 @@ output "organization" {
 output "teams" {
   value = module.team
 }
+
+output "projects" {
+  value = module.project
+}

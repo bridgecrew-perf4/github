@@ -7,7 +7,7 @@ module "team" {
   }
 
   name        = each.key
-  description = try(each.value.description, null)
+  description = try(each.value.description, "Managed by Terraform.")
   is_secret   = try(each.value.is_secret, false)
 
   parent_id                  = try(each.value.parent_id, null)

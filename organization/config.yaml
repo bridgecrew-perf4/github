@@ -35,3 +35,13 @@ teams:
   description: "A chapter for infra engineers in Tedilabs"
   maintainers:
   - posquit0
+
+projects:
+- name: "Roadmap for Terraform Modules"
+  description: Roadmap for developing Terraform Modules
+  columns:
+  - Backlog
+  - To-do
+  - In Progress
+  - In Review
+  - Done
