@@ -1,0 +1,7 @@
+context:
+  workspace: "github-cloud-tedilabs-organization"
+  organization: "tedilabs"
+
+teams:
+- name: "chapter-backend"
+  description: "A chapter for backend development in Tedilabs"
