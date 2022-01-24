@@ -11,30 +11,53 @@ organization:
   - daangn-claud
 
 teams:
-- name: "chapter-android"
-  description: "A chapter for android app developers in Tedilabs"
-  maintainers:
-  - posquit0
-- name: "chapter-backend"
-  description: "A chapter for backend engineers in Tedilabs"
-  maintainers:
-  - posquit0
-- name: "chapter-data"
-  description: "A chapter for data engineers in Tedilabs"
-  maintainers:
-  - posquit0
-- name: "chapter-dba"
-  description: "A chapter for database administrators in Tedilabs"
-- name: "chapter-ios"
-  description: "A chapter for iOS app developers in Tedilabs"
-- name: "chapter-web"
-  description: "A chapter for web developers in Tedilabs"
-  maintainers:
-  - posquit0
-- name: "chapter-infra"
-  description: "A chapter for infra engineers in Tedilabs"
-  maintainers:
-  - posquit0
+  primary:
+  - name: "Tedilabs"
+    description: "All employees in Tedilabs"
+    maintainers:
+    - posquit0
+  - name: "Bots"
+    description: "A team for bot accounts in Tedilabs"
+    is_secret: true
+    members:
+    - tedilabs-dev
+  secondary:
+  - name: "Chapter Android"
+    description: "A chapter for android app developers in Tedilabs"
+    parent_team: Tedilabs
+    maintainers:
+    - posquit0
+  - name: "Chapter Backend"
+    description: "A chapter for backend engineers in Tedilabs"
+    parent_team: Tedilabs
+    maintainers:
+    - posquit0
+  - name: "Chapter Data"
+    description: "A chapter for data engineers in Tedilabs"
+    parent_team: Tedilabs
+    maintainers:
+    - posquit0
+  - name: "Chapter DBA"
+    description: "A chapter for database administrators in Tedilabs"
+    parent_team: Tedilabs
+  - name: "Chapter iOS"
+    description: "A chapter for iOS app developers in Tedilabs"
+    parent_team: Tedilabs
+  - name: "Chapter Web"
+    description: "A chapter for web developers in Tedilabs"
+    parent_team: Tedilabs
+    maintainers:
+    - posquit0
+  - name: "Chapter Infra"
+    description: "A chapter for infra engineers in Tedilabs"
+    parent_team: Tedilabs
+    maintainers:
+    - posquit0
+  - name: "Team DevOps"
+    description: "A team for devops objective in Tedilabs"
+    parent_team: Tedilabs
+    maintainers:
+    - posquit0
 
 projects:
 - name: "Roadmap for Terraform Modules"

@@ -3,7 +3,10 @@ output "organization" {
 }
 
 output "teams" {
-  value = module.team
+  value = {
+    primary   = module.team__primary
+    secondary = module.team__secondary
+  }
 }
 
 output "projects" {
