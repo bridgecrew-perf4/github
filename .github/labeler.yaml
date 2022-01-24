@@ -1,0 +1,6 @@
+# Domains
+"org":
+- organization/**/*
+
+"repo":
+- repositories/**/*
