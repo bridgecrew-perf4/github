@@ -14,4 +14,7 @@ module "team" {
   default_maintainer_enabled = try(each.value.default_maintainer_enabled, false)
 
   ldap_group_dn = try(each.value.ldap_group_dn, null)
+
+  maintainers = try(each.value.maintainers, [])
+  members     = try(each.value.members, [])
 }

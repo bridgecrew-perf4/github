@@ -8,7 +8,7 @@ module "organization" {
 
   name = each.key
 
-  admins  = try(each.value.admins, [])
+  owners  = try(each.value.owners, [])
   members = try(each.value.members, [])
 
   blocked_users = try(each.value.blocked_users, [])

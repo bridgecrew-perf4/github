@@ -4,7 +4,7 @@ context:
 
 organization:
   name: tedilabs
-  admins:
+  owners:
   - posquit0
   - tedilabs-dev
   blocked_users:
@@ -13,15 +13,25 @@ organization:
 teams:
 - name: "chapter-android"
   description: "A chapter for android app developers in Tedilabs"
+  maintainers:
+  - posquit0
 - name: "chapter-backend"
   description: "A chapter for backend engineers in Tedilabs"
+  maintainers:
+  - posquit0
 - name: "chapter-data"
   description: "A chapter for data engineers in Tedilabs"
+  maintainers:
+  - posquit0
 - name: "chapter-dba"
   description: "A chapter for database administrators in Tedilabs"
 - name: "chapter-ios"
   description: "A chapter for iOS app developers in Tedilabs"
 - name: "chapter-web"
   description: "A chapter for web developers in Tedilabs"
+  maintainers:
+  - posquit0
 - name: "chapter-infra"
   description: "A chapter for infra engineers in Tedilabs"
+  maintainers:
+  - posquit0
