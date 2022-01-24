@@ -1,34 +1,46 @@
 variable "name" {
-  description = "The name of the team."
+  description = "(Required) The name of the team."
   type        = string
 }
 
 variable "description" {
-  description = "A description of the team."
+  description = "(Optional) A description of the team."
   type        = string
-  default     = null
+  default     = "Managed by Terraform."
 }
 
 variable "is_secret" {
-  description = "If true, team is only visible to the people on the team and people with owner permissions."
+  description = "(Optional) If true, team is only visible to the people on the team and people with owner permissions."
   type        = bool
   default     = false
 }
 
 variable "parent_id" {
-  description = "The ID of the parent team, if this is a nested team."
+  description = "(Optional) The ID of the parent team, if this is a nested team."
   type        = string
   default     = null
 }
 
 variable "default_maintainer_enabled" {
-  description = "If true, adds the creating user as a default maintainer to the team."
+  description = "(Optional) If true, adds the creating user as a default maintainer to the team."
   type        = bool
   default     = false
 }
 
 variable "ldap_group_dn" {
-  description = "The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server."
+  description = "(Optional) The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server."
   type        = string
   default     = null
+}
+
+variable "maintainers" {
+  description = "(Optional) A list of usernames to add users as `maintainer` role. When applied, the user will become a maintainer of the team."
+  type        = set(string)
+  default     = []
+}
+
+variable "members" {
+  description = "(Optional) A list of usernames to add users as `member` role. When applied, the user will become a member of the team."
+  type        = set(string)
+  default     = []
 }

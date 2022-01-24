@@ -42,3 +42,18 @@ output "default_maintainer_enabled" {
   description = "Whether to add the creating user as a default maintainer."
   value       = github_team.this.create_default_maintainer
 }
+
+output "maintainers" {
+  description = "A list of the maintainers of the team."
+  value       = var.maintainers
+}
+
+output "members" {
+  description = "A list of the members of the team."
+  value       = var.members
+}
+
+output "test" {
+  description = "The Node ID of the team."
+  value       = github_team_membership.this
+}
