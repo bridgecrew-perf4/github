@@ -2,6 +2,26 @@ context:
   workspace: "github-cloud-tedilabs-organization"
   organization: "tedilabs"
 
+organization:
+  name: tedilabs
+  admins:
+  - posquit0
+  - tedilabs-dev
+  blocked_users:
+  - daangn-claud
+
 teams:
+- name: "chapter-android"
+  description: "A chapter for android app developers in Tedilabs"
 - name: "chapter-backend"
-  description: "A chapter for backend development in Tedilabs"
+  description: "A chapter for backend engineers in Tedilabs"
+- name: "chapter-data"
+  description: "A chapter for data engineers in Tedilabs"
+- name: "chapter-dba"
+  description: "A chapter for database administrators in Tedilabs"
+- name: "chapter-ios"
+  description: "A chapter for iOS app developers in Tedilabs"
+- name: "chapter-web"
+  description: "A chapter for web developers in Tedilabs"
+- name: "chapter-infra"
+  description: "A chapter for infra engineers in Tedilabs"
