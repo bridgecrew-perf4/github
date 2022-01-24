@@ -25,6 +25,5 @@ locals {
 ###################################################
 
 provider "github" {
-  base_url = "https://github.com/"
-  owner    = local.context.organization
+  owner = local.context.organization
 }
