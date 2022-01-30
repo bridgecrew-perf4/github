@@ -16,7 +16,7 @@ resource "github_repository_project" "this" {
 
 
 ###################################################
-# Colums for GitHub Project
+# Columns for GitHub Project
 ###################################################
 
 resource "github_project_column" "this" {
