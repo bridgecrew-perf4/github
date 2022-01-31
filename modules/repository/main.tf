@@ -1,8 +1,25 @@
 resource "github_repository" "this" {
-  name        = var.name
-  description = var.description
+  name         = var.name
+  description  = var.description
+  homepage_url = var.homepage
 
-  visibility = var.visibility
+  visibility         = var.visibility
+  is_template        = var.is_template
+  archived           = var.archived
+  archive_on_destroy = var.archive_on_destroy
+
+  auto_init          = try(var.template.init_readme, false)
+  license_template   = try(var.template.license, null)
+  gitignore_template = try(var.template.gitignore, null)
+
+  dynamic "template" {
+    for_each = try([var.template.repository], [])
+
+    content {
+      owner      = split("/", template.value)[0]
+      repository = split("/", template.value)[1]
+    }
+  }
 
   has_issues   = contains(var.features, "ISSUES")
   has_projects = contains(var.features, "PROJECTS")

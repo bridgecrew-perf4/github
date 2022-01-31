@@ -1,6 +1,21 @@
+output "id" {
+  description = "The ID of the GitHub repository."
+  value       = github_repository.this.repo_id
+}
+
+output "node_id" {
+  description = "The node ID of the GitHub repository. This is GraphQL global node id for use with v4 API."
+  value       = github_repository.this.node_id
+}
+
 output "name" {
   description = "The name of the repository."
   value       = github_repository.this.name
+}
+
+output "full_name" {
+  description = "The full name of the repository. A string of the form `orgname/reponame`"
+  value       = github_repository.this.full_name
 }
 
 output "description" {
@@ -8,9 +23,49 @@ output "description" {
   value       = github_repository.this.description
 }
 
+output "homepage" {
+  description = "A URL of the website for the repository."
+  value       = github_repository.this.homepage_url
+}
+
+output "url" {
+  description = "The URL of the repository."
+  value       = github_repository.this.html_url
+}
+
+output "git_clone_url" {
+  description = "The URL that can be provided to `git clone` to clone the repository anonymously via the git protocol."
+  value       = github_repository.this.git_clone_url
+}
+
+output "http_clone_url" {
+  description = "The URL that can be provided to `git clone` to clone the repository anonymously via HTTPS."
+  value       = github_repository.this.http_clone_url
+}
+
+output "ssh_clone_url" {
+  description = "The URL that can be provided to `git clone` to clone the repository anonymously via SSH."
+  value       = github_repository.this.ssh_clone_url
+}
+
 output "visibility" {
   description = "The visibility of the repository. Can be `public`, `private` or `internal`."
   value       = github_repository.this.visibility
+}
+
+output "is_template" {
+  description = "Whether this is a template repository."
+  value       = github_repository.this.is_template
+}
+
+output "archived" {
+  description = "Whether the repository is archived."
+  value       = github_repository.this.archived
+}
+
+output "template" {
+  description = "The template of the repository."
+  value       = var.template
 }
 
 output "features" {
