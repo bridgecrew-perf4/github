@@ -1,0 +1,154 @@
+context:
+  workspace: "github-cloud-tedilabs-repositories"
+  organization: "tedilabs"
+
+repositories:
+- name: terraform-aws-account
+  description: 🌳 A sustainable Terraform Package which creates Account & IAM resources on AWS
+  homepage: https://registry.terraform.io/modules/tedilabs/account
+  visibility: public
+  topics:
+  - lang-hcl
+  - hcl2
+  - terraform
+  - terraform-module
+  - terraform-modules
+  - aws
+  - aws-iam
+  - aws-organization
+  - aws-sso
+  - devops
+  - sre
+  permissions:
+    admin:
+      teams:
+      - chapter-infra
+- name: terraform-aws-container
+  description: 🌳 A sustainable Terraform Package which creates resources for Container Services on AWS
+  homepage: https://registry.terraform.io/modules/tedilabs/container
+  visibility: public
+  topics:
+  - lang-hcl
+  - hcl2
+  - terraform
+  - terraform-module
+  - terraform-modules
+  - aws
+  - aws-ecr
+  - aws-eks
+  - devops
+  - sre
+  permissions:
+    admin:
+      teams:
+      - chapter-infra
+- name: terraform-aws-data
+  description: 🌳 A sustainable Terraform Package which creates resources for Data Services on AWS
+  homepage: https://registry.terraform.io/modules/tedilabs/data
+  visibility: public
+  topics:
+  - lang-hcl
+  - hcl2
+  - terraform
+  - terraform-module
+  - terraform-modules
+  - aws
+  - aws-athena
+  - devops
+  - sre
+  permissions:
+    admin:
+      teams:
+      - chapter-infra
+- name: terraform-aws-domain
+  description: 🌳 A sustainable Terraform Package which creates resources for Domain Services on AWS
+  homepage: https://registry.terraform.io/modules/tedilabs/domain
+  visibility: public
+  topics:
+  - lang-hcl
+  - hcl2
+  - terraform
+  - terraform-module
+  - terraform-modules
+  - aws
+  - aws-route53
+  - devops
+  - sre
+  permissions:
+    admin:
+      teams:
+      - chapter-infra
+- name: terraform-aws-misc
+  description: 🌳 A sustainable Terraform Package which creates MISC resources on AWS
+  homepage: https://registry.terraform.io/modules/tedilabs/misc
+  visibility: public
+  topics:
+  - lang-hcl
+  - hcl2
+  - terraform
+  - terraform-module
+  - terraform-modules
+  - aws
+  - devops
+  - sre
+  permissions:
+    admin:
+      teams:
+      - chapter-infra
+- name: terraform-aws-ml
+  description: 🌳 A sustainable Terraform Package which creates Machine Learning resources on AWS
+  homepage: https://registry.terraform.io/modules/tedilabs/ml
+  visibility: public
+  topics:
+  - lang-hcl
+  - hcl2
+  - terraform
+  - terraform-module
+  - terraform-modules
+  - aws
+  - devops
+  - sre
+  permissions:
+    admin:
+      teams:
+      - chapter-infra
+- name: terraform-aws-network
+  description: 🌳 A sustainable Terraform Package which creates Network resources on AWS
+  homepage: https://registry.terraform.io/modules/tedilabs/network
+  visibility: public
+  topics:
+  - lang-hcl
+  - hcl2
+  - terraform
+  - terraform-module
+  - terraform-modules
+  - aws
+  - aws-dx
+  - aws-privatelink
+  - aws-vpc
+  - aws-vpn
+  - devops
+  - sre
+  permissions:
+    admin:
+      teams:
+      - chapter-infra
+- name: terraform-aws-security
+  description: 🌳 A sustainable Terraform Package which creates Security resources on AWS
+  homepage: https://registry.terraform.io/modules/tedilabs/security
+  visibility: public
+  topics:
+  - lang-hcl
+  - hcl2
+  - terraform
+  - terraform-module
+  - terraform-modules
+  - aws
+  - aws-access-analyzer
+  - aws-config
+  - devops
+  - sre
+  permissions:
+    admin:
+      teams:
+      - chapter-infra
