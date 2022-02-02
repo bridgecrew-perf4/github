@@ -30,6 +30,7 @@ module "repository" {
     local.default_topics,
     try(each.value.topics, []),
   )
+  issue_labels = try(each.value.issue_labels, [])
 
   read_teams     = try(each.value.permissions.read.teams, [])
   triage_teams   = try(each.value.permissions.triage.teams, [])
@@ -42,6 +43,8 @@ module "repository" {
   write_collaborators    = try(each.value.permissions.write.collaborators, [])
   maintain_collaborators = try(each.value.permissions.maintain.collaborators, [])
   admin_collaborators    = try(each.value.permissions.admin.collaborators, [])
+
+  default_branch = try(each.value.default_branch, null)
 
   deploy_keys = try(each.value.deploy_keys, [])
 }
