@@ -1,0 +1,15 @@
+context:
+  workspace: "github-cloud-tedilabs-webhooks"
+  organization: "tedilabs"
+
+remote_states:
+  "repositories":
+    organization: "tedilabs"
+    workspace: "github-cloud-tedilabs-repositories"
+
+webhooks: []
+# - url: https://asdf.com/webhook
+#   repositories:
+#   - "*"
+#   events:
+#   - push
