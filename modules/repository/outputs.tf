@@ -88,6 +88,17 @@ output "topics" {
   value       = github_repository.this.topics
 }
 
+output "issue_labels" {
+  description = "A list of issue labels for the repository."
+  value = [
+    for label in github_issue_label.this : {
+      name        = label.name
+      color       = label.color
+      description = label.description
+    }
+  ]
+}
+
 output "permissions" {
   description = "The access control list which manage individual and team access to the repository."
   value = {
@@ -112,6 +123,11 @@ output "permissions" {
       collaborators = var.admin_collaborators
     }
   }
+}
+
+output "default_branch" {
+  description = "The default branch of the repository."
+  value       = one(github_branch_default.this.*.branch)
 }
 
 output "deploy_keys" {

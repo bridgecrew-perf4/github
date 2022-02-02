@@ -93,6 +93,17 @@ variable "topics" {
   default     = []
 }
 
+variable "issue_labels" {
+  description = <<EOF
+  (Optional) A list of issue labels for the repository. Each member of `issue_labels` block as defined below.
+    (Required) `name` - The name of the label.
+    (Required) `color` - A 6 character hex code, without the leading #, identifying the color of the label.
+    (Optional) `description` - A short description of the label.
+  EOF
+  type        = set(map(string))
+  default     = []
+}
+
 variable "read_teams" {
   description = "(Optional) A list of teams with `read` permission to the repository. You can use GitHub team id or the GitHub team slug."
   type        = set(string)
@@ -151,6 +162,12 @@ variable "admin_collaborators" {
   description = "(Optional) A list of users as collaborator with `admin` permission to the repository. You can use GitHub username."
   type        = set(string)
   default     = []
+}
+
+variable "default_branch" {
+  description = "(Optional) Set the default branch for the repository. Default is `main` branch."
+  type        = string
+  default     = "main"
 }
 
 variable "deploy_keys" {

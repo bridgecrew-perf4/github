@@ -6,6 +6,8 @@ This module creates following resources.
 - `github_repository_collaborator` (optional)
 - `github_team_repository` (optional)
 - `github_repository_deploy_key` (optional)
+- `github_issue_label` (optional)
+- `github_branch_default` (optional)
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
@@ -29,6 +31,8 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [github_branch_default.this](https://registry.terraform.io/providers/hashicorp/github/4.13.0/docs/resources/branch_default) | resource |
+| [github_issue_label.this](https://registry.terraform.io/providers/hashicorp/github/4.13.0/docs/resources/issue_label) | resource |
 | [github_repository.this](https://registry.terraform.io/providers/hashicorp/github/4.13.0/docs/resources/repository) | resource |
 | [github_repository_collaborator.this](https://registry.terraform.io/providers/hashicorp/github/4.13.0/docs/resources/repository_collaborator) | resource |
 | [github_repository_deploy_key.this](https://registry.terraform.io/providers/hashicorp/github/4.13.0/docs/resources/repository_deploy_key) | resource |
@@ -43,12 +47,14 @@ No modules.
 | <a name="input_admin_teams"></a> [admin\_teams](#input\_admin\_teams) | (Optional) A list of teams with `admin` permission to the repository. You can use GitHub team id or the GitHub team slug. | `set(string)` | `[]` | no |
 | <a name="input_archive_on_destroy"></a> [archive\_on\_destroy](#input\_archive\_on\_destroy) | (Optional) Set to `true` to archive the repository instead of deleting on destroy. | `bool` | `false` | no |
 | <a name="input_archived"></a> [archived](#input\_archived) | (Optional) Specify if the repository should be archived. Defaults to `false`. NOTE: Currently, the API does not support unarchiving. | `bool` | `false` | no |
+| <a name="input_default_branch"></a> [default\_branch](#input\_default\_branch) | (Optional) Set the default branch for the repository. Default is `main` branch. | `string` | `"main"` | no |
 | <a name="input_delete_branch_on_merge"></a> [delete\_branch\_on\_merge](#input\_delete\_branch\_on\_merge) | (Optional) Automatically delete head branch after a pull request is merged. Defaults to true. | `bool` | `true` | no |
 | <a name="input_deploy_keys"></a> [deploy\_keys](#input\_deploy\_keys) | (Optional) A list of deploy keys to grant access to the repository. A deploy key is a SSH key. Each member of `deploy_keys` block as defined below.<br>    (Required) `name` - A name of deploy key.<br>    (Optional) `key` - A SSH key. Begins with 'ssh-rsa', 'ecdsa-sha2-nistp256', 'ecdsa-sha2-nistp384', 'ecdsa-sha2-nistp521', 'ssh-ed25519', 'sk-ecdsa-sha2-nistp256@openssh.com', or 'sk-ssh-ed25519@openssh.com'.<br>    (Optional) `writable` - Whether to allow write access to the repository. The key can be used to push to the repository if enabled. | <pre>list(object({<br>    name     = string<br>    key      = string<br>    writable = bool<br>  }))</pre> | `[]` | no |
 | <a name="input_description"></a> [description](#input\_description) | (Optional) A description of the repository. | `string` | `"Managed by Terraform."` | no |
 | <a name="input_features"></a> [features](#input\_features) | (Optional) A list of enabled features on the repository. Available features: `ISSUES`, `PROJECTS`, `WIKI`. | `set(string)` | <pre>[<br>  "ISSUES"<br>]</pre> | no |
 | <a name="input_homepage"></a> [homepage](#input\_homepage) | (Optional) A URL of website describing the repository. | `string` | `null` | no |
 | <a name="input_is_template"></a> [is\_template](#input\_is\_template) | (Optional) Set to `true` if this is a template repository. | `bool` | `false` | no |
+| <a name="input_issue_labels"></a> [issue\_labels](#input\_issue\_labels) | (Optional) A list of issue labels for the repository. Each member of `issue_labels` block as defined below.<br>    (Required) `name` - The name of the label.<br>    (Required) `color` - A 6 character hex code, without the leading #, identifying the color of the label.<br>    (Optional) `description` - A short description of the label. | `set(map(string))` | `[]` | no |
 | <a name="input_maintain_collaborators"></a> [maintain\_collaborators](#input\_maintain\_collaborators) | (Optional) A list of users as collaborator with `maintain` permission to the repository. You can use GitHub username. | `set(string)` | `[]` | no |
 | <a name="input_maintain_teams"></a> [maintain\_teams](#input\_maintain\_teams) | (Optional) A list of teams with `maintain` permission to the repository. You can use GitHub team id or the GitHub team slug. | `set(string)` | `[]` | no |
 | <a name="input_merge_strategies"></a> [merge\_strategies](#input\_merge\_strategies) | (Optional) A list of allowed strategies for merging pull requests on the repository. Available strategies: `MERGE_COMMIT`, `SQUASH`, `REBASE`. | `set(string)` | <pre>[<br>  "SQUASH",<br>  "REBASE"<br>]</pre> | no |
@@ -67,6 +73,7 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_archived"></a> [archived](#output\_archived) | Whether the repository is archived. |
+| <a name="output_default_branch"></a> [default\_branch](#output\_default\_branch) | The default branch of the repository. |
 | <a name="output_delete_branch_on_merge"></a> [delete\_branch\_on\_merge](#output\_delete\_branch\_on\_merge) | Automatically delete head branch after a pull request is merged. |
 | <a name="output_deploy_keys"></a> [deploy\_keys](#output\_deploy\_keys) | A list of deploy keys granted access to the repository. |
 | <a name="output_description"></a> [description](#output\_description) | The description of the repository. |
@@ -77,6 +84,7 @@ No modules.
 | <a name="output_http_clone_url"></a> [http\_clone\_url](#output\_http\_clone\_url) | The URL that can be provided to `git clone` to clone the repository anonymously via HTTPS. |
 | <a name="output_id"></a> [id](#output\_id) | The ID of the GitHub repository. |
 | <a name="output_is_template"></a> [is\_template](#output\_is\_template) | Whether this is a template repository. |
+| <a name="output_issue_labels"></a> [issue\_labels](#output\_issue\_labels) | A list of issue labels for the repository. |
 | <a name="output_merge_strategies"></a> [merge\_strategies](#output\_merge\_strategies) | A list of available strategies for merging pull requests on the repository. |
 | <a name="output_name"></a> [name](#output\_name) | The name of the repository. |
 | <a name="output_node_id"></a> [node\_id](#output\_node\_id) | The node ID of the GitHub repository. This is GraphQL global node id for use with v4 API. |

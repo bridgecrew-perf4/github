@@ -33,3 +33,10 @@ resource "github_repository" "this" {
 
   topics = var.topics
 }
+
+resource "github_branch_default" "this" {
+  count = var.default_branch != null ? 1 : 0
+
+  repository = github_repository.this.name
+  branch     = var.default_branch
+}
