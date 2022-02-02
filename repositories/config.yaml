@@ -2,6 +2,11 @@ context:
   workspace: "github-cloud-tedilabs-repositories"
   organization: "tedilabs"
 
+remote_states:
+  "organization":
+    organization: "tedilabs"
+    workspace: "github-cloud-tedilabs-organization"
+
 repositories:
 - name: terraform-aws-account
   description: 🌳 A sustainable Terraform Package which creates Account & IAM resources on AWS
