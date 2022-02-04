@@ -83,6 +83,28 @@ repositories:
     admin:
       teams:
       - chapter-infra
+- name: terraform-aws-load-balancer
+  description: 🌳 A sustainable Terraform Package which creates resources for Load Balancers on AWS
+  homepage: https://registry.terraform.io/modules/tedilabs/load-balancer
+  visibility: public
+  topics:
+  - lang-hcl
+  - hcl2
+  - terraform
+  - terraform-module
+  - terraform-modules
+  - aws
+  - aws-alb
+  - aws-clb
+  - aws-elb
+  - aws-nlb
+  - aws-load-balancer
+  - devops
+  - sre
+  permissions:
+    admin:
+      teams:
+      - chapter-infra
 - name: terraform-aws-misc
   description: 🌳 A sustainable Terraform Package which creates MISC resources on AWS
   homepage: https://registry.terraform.io/modules/tedilabs/misc
