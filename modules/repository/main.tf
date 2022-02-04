@@ -32,6 +32,15 @@ resource "github_repository" "this" {
   delete_branch_on_merge = var.delete_branch_on_merge
 
   topics = var.topics
+
+  lifecycle {
+    ignore_changes = [
+      auto_init,
+      license_template,
+      gitignore_template,
+      template,
+    ]
+  }
 }
 
 resource "github_branch_default" "this" {
