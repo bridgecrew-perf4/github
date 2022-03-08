@@ -1,5 +1,5 @@
 locals {
-  default_topics = ["hacktoberfest"]
+  default_topics = ["hacktoberfest", "tedilabs"]
 }
 
 module "repository" {

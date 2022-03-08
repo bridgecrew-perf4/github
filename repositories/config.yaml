@@ -8,6 +8,41 @@ remote_states:
     workspace: "github-cloud-tedilabs-organization"
 
 repositories:
+- name: .github
+  description: 📣 Default community health files for @tedilabs organization on GitHub.
+  homepage: null
+  visibility: public
+  topics:
+  - github
+  - devops
+  - sre
+  permissions:
+    admin:
+      teams:
+      - chapter-infra
+- name: github
+  description: ♥️  The best way to manage GitHub organization in @tedilabs
+  homepage: null
+  visibility: public
+  topics:
+  - lang-hcl
+  - hcl2
+  - iac
+  - terraform
+  - terraform-module
+  - terraform-modules
+  - terraform-github
+  - github
+  - github-organization
+  - github-repository
+  - github-team
+  - devops
+  - sre
+  permissions:
+    admin:
+      teams:
+      - chapter-infra
+## Terraform Modules
 - name: terraform-aws-account
   description: 🌳 A sustainable Terraform Package which creates Account & IAM resources on AWS
   homepage: https://registry.terraform.io/modules/tedilabs/account
@@ -15,9 +50,11 @@ repositories:
   topics:
   - lang-hcl
   - hcl2
+  - iac
   - terraform
   - terraform-module
   - terraform-modules
+  - terraform-aws
   - aws
   - aws-iam
   - aws-organization
@@ -35,9 +72,11 @@ repositories:
   topics:
   - lang-hcl
   - hcl2
+  - iac
   - terraform
   - terraform-module
   - terraform-modules
+  - terraform-aws
   - aws
   - aws-ecr
   - aws-eks
@@ -54,9 +93,11 @@ repositories:
   topics:
   - lang-hcl
   - hcl2
+  - iac
   - terraform
   - terraform-module
   - terraform-modules
+  - terraform-aws
   - aws
   - aws-athena
   - devops
@@ -72,9 +113,11 @@ repositories:
   topics:
   - lang-hcl
   - hcl2
+  - iac
   - terraform
   - terraform-module
   - terraform-modules
+  - terraform-aws
   - aws
   - aws-route53
   - devops
@@ -90,9 +133,11 @@ repositories:
   topics:
   - lang-hcl
   - hcl2
+  - iac
   - terraform
   - terraform-module
   - terraform-modules
+  - terraform-aws
   - aws
   - aws-alb
   - aws-clb
@@ -112,9 +157,11 @@ repositories:
   topics:
   - lang-hcl
   - hcl2
+  - iac
   - terraform
   - terraform-module
   - terraform-modules
+  - terraform-aws
   - aws
   - devops
   - sre
@@ -129,9 +176,11 @@ repositories:
   topics:
   - lang-hcl
   - hcl2
+  - iac
   - terraform
   - terraform-module
   - terraform-modules
+  - terraform-aws
   - aws
   - devops
   - sre
@@ -146,9 +195,11 @@ repositories:
   topics:
   - lang-hcl
   - hcl2
+  - iac
   - terraform
   - terraform-module
   - terraform-modules
+  - terraform-aws
   - aws
   - aws-dx
   - aws-privatelink
@@ -167,9 +218,11 @@ repositories:
   topics:
   - lang-hcl
   - hcl2
+  - iac
   - terraform
   - terraform-module
   - terraform-modules
+  - terraform-aws
   - aws
   - aws-access-analyzer
   - aws-config
