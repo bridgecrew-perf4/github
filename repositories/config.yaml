@@ -9,7 +9,7 @@ remote_states:
 
 repositories:
 - name: .github
-  description: 📣 Default community health files for @tedilabs organization on GitHub.
+  description: 📣 Default community health files for @tedilabs organization on GitHub
   homepage: null
   visibility: public
   topics:
@@ -36,6 +36,39 @@ repositories:
   - github-organization
   - github-repository
   - github-team
+  - devops
+  - sre
+  permissions:
+    admin:
+      teams:
+      - chapter-infra
+## Kubernetes
+- name: k8s-repository
+  description: ♻️  Repository for Reusable Kubernetes App Manifests with Kustomize
+  homepage: null
+  visibility: public
+  topics:
+  - lang-yaml
+  - k8s
+  - kubernetes
+  - kustomize
+  - gitops
+  - devops
+  - sre
+  permissions:
+    admin:
+      teams:
+      - chapter-infra
+- name: k8s-manifests
+  description: ♥️  The best way to manage the kubernetes workloads in @tedilabs
+  homepage: null
+  visibility: private
+  topics:
+  - lang-yaml
+  - k8s
+  - kubernetes
+  - kustomize
+  - gitops
   - devops
   - sre
   permissions:
