@@ -42,6 +42,25 @@ repositories:
     admin:
       teams:
       - chapter-infra
+- name: api-docs-server
+  description: ♥️  A web application to serve multiple API docs with Open API Specification
+  homepage: null
+  visibility: private
+  topics:
+  - lang-nodejs
+  - swagger
+  - redoc
+  - oas
+  - openapi
+  - api-docs
+  - api-docs
+  - api-documentation
+  - documentation-tool
+  permissions:
+    admin:
+      teams:
+      - chapter-infra
+
 ## Kubernetes
 - name: k8s-repository
   description: ♻️  Repository for Reusable Kubernetes App Manifests with Kustomize
@@ -259,6 +278,41 @@ repositories:
   - aws
   - aws-access-analyzer
   - aws-config
+  - devops
+  - sre
+  permissions:
+    admin:
+      teams:
+      - chapter-infra
+## Terraform Workspaces
+- name: infrastructure
+  description: ♥️  The best way to manage the infrastructure in @tedilabs
+  homepage: null
+  visibility: private
+  topics:
+  - lang-hcl
+  - hcl2
+  - iac
+  - terraform
+  - terraform-aws
+  - aws
+  - devops
+  - sre
+  permissions:
+    admin:
+      teams:
+      - chapter-infra
+- name: karrotpay-cb-infrastructure
+  description: ♥️  The best way to manage the infrastructure of karrotpay sandbox account
+  homepage: null
+  visibility: private
+  topics:
+  - lang-hcl
+  - hcl2
+  - iac
+  - terraform
+  - terraform-aws
+  - aws
   - devops
   - sre
   permissions:
