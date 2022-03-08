@@ -60,6 +60,20 @@ repositories:
     admin:
       teams:
       - chapter-infra
+- name: dockerfiles
+  description: 💾 A collection of useful Dockerfiles
+  homepage: null
+  visibility: public
+  topics:
+  - lang-dockerfile
+  - dockerfile
+  - dockerfiles
+  - docker
+  - docker-image
+  permissions:
+    admin:
+      teams:
+      - chapter-infra
 
 ## Kubernetes
 - name: k8s-repository
