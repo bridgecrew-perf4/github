@@ -298,6 +298,23 @@ repositories:
     admin:
       teams:
       - chapter-infra
+- name: terraform-github-modules
+  description: 🌳 A sustainable Terraform Package which manage all of things on GitHub
+  homepage: https://registry.terraform.io/modules/tedilabs/modules
+  visibility: public
+  topics:
+  - lang-hcl
+  - hcl2
+  - terraform
+  - terraform-module
+  - terraform-modules
+  - github
+  - devops
+  - sre
+  permissions:
+    admin:
+      teams:
+      - chapter-infra
 ## Terraform Workspaces
 - name: infrastructure
   description: ♥️  The best way to manage the infrastructure in @tedilabs
