@@ -3,7 +3,8 @@ locals {
 }
 
 module "repository" {
-  source = "../modules/repository"
+  source  = "tedilabs/modules/github//modules/repository"
+  version = "~> 0.7.0"
 
   for_each = {
     for repository in local.config.repositories :

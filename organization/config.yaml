@@ -7,8 +7,7 @@ organization:
   owners:
   - posquit0
   - tedilabs-dev
-  blocked_users:
-  - daangn-claud
+  blocked_users: []
 
 teams:
   primary:

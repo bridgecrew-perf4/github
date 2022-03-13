@@ -111,7 +111,7 @@ repositories:
 ## Terraform Modules
 - name: terraform-aws-account
   description: 🌳 A sustainable Terraform Package which creates Account & IAM resources on AWS
-  homepage: https://registry.terraform.io/modules/tedilabs/account
+  homepage: https://registry.terraform.io/modules/tedilabs/account/aws
   visibility: public
   topics:
   - lang-hcl
@@ -133,7 +133,7 @@ repositories:
       - chapter-infra
 - name: terraform-aws-container
   description: 🌳 A sustainable Terraform Package which creates resources for Container Services on AWS
-  homepage: https://registry.terraform.io/modules/tedilabs/container
+  homepage: https://registry.terraform.io/modules/tedilabs/container/aws
   visibility: public
   topics:
   - lang-hcl
@@ -154,7 +154,7 @@ repositories:
       - chapter-infra
 - name: terraform-aws-data
   description: 🌳 A sustainable Terraform Package which creates resources for Data Services on AWS
-  homepage: https://registry.terraform.io/modules/tedilabs/data
+  homepage: https://registry.terraform.io/modules/tedilabs/data/aws
   visibility: public
   topics:
   - lang-hcl
@@ -174,7 +174,7 @@ repositories:
       - chapter-infra
 - name: terraform-aws-domain
   description: 🌳 A sustainable Terraform Package which creates resources for Domain Services on AWS
-  homepage: https://registry.terraform.io/modules/tedilabs/domain
+  homepage: https://registry.terraform.io/modules/tedilabs/domain/aws
   visibility: public
   topics:
   - lang-hcl
@@ -194,7 +194,7 @@ repositories:
       - chapter-infra
 - name: terraform-aws-load-balancer
   description: 🌳 A sustainable Terraform Package which creates resources for Load Balancers on AWS
-  homepage: https://registry.terraform.io/modules/tedilabs/load-balancer
+  homepage: https://registry.terraform.io/modules/tedilabs/load-balancer/aws
   visibility: public
   topics:
   - lang-hcl
@@ -218,7 +218,7 @@ repositories:
       - chapter-infra
 - name: terraform-aws-misc
   description: 🌳 A sustainable Terraform Package which creates MISC resources on AWS
-  homepage: https://registry.terraform.io/modules/tedilabs/misc
+  homepage: https://registry.terraform.io/modules/tedilabs/misc/aws
   visibility: public
   topics:
   - lang-hcl
@@ -237,7 +237,7 @@ repositories:
       - chapter-infra
 - name: terraform-aws-ml
   description: 🌳 A sustainable Terraform Package which creates Machine Learning resources on AWS
-  homepage: https://registry.terraform.io/modules/tedilabs/ml
+  homepage: https://registry.terraform.io/modules/tedilabs/ml/aws
   visibility: public
   topics:
   - lang-hcl
@@ -256,7 +256,7 @@ repositories:
       - chapter-infra
 - name: terraform-aws-network
   description: 🌳 A sustainable Terraform Package which creates Network resources on AWS
-  homepage: https://registry.terraform.io/modules/tedilabs/network
+  homepage: https://registry.terraform.io/modules/tedilabs/network/aws
   visibility: public
   topics:
   - lang-hcl
@@ -279,7 +279,7 @@ repositories:
       - chapter-infra
 - name: terraform-aws-security
   description: 🌳 A sustainable Terraform Package which creates Security resources on AWS
-  homepage: https://registry.terraform.io/modules/tedilabs/security
+  homepage: https://registry.terraform.io/modules/tedilabs/security/aws
   visibility: public
   topics:
   - lang-hcl
@@ -300,7 +300,7 @@ repositories:
       - chapter-infra
 - name: terraform-github-modules
   description: 🌳 A sustainable Terraform Package which manage all of things on GitHub
-  homepage: https://registry.terraform.io/modules/tedilabs/modules
+  homepage: https://registry.terraform.io/modules/tedilabs/modules/github
   visibility: public
   topics:
   - lang-hcl

@@ -1,5 +1,6 @@
 module "project" {
-  source = "../modules/project"
+  source  = "tedilabs/modules/github//modules/project"
+  version = "~> 0.7.0"
 
   for_each = {
     for project in local.config.projects :
