@@ -108,6 +108,7 @@ repositories:
     admin:
       teams:
       - chapter-infra
+
 ## Terraform Modules
 - name: terraform-aws-account
   description: 🌳 A sustainable Terraform Package which creates Account & IAM resources on AWS
@@ -271,6 +272,29 @@ repositories:
   - aws-privatelink
   - aws-vpc
   - aws-vpn
+  - devops
+  - sre
+  permissions:
+    admin:
+      teams:
+      - chapter-infra
+- name: terraform-aws-secret
+  description: 🌳 A sustainable Terraform Package which creates Secret resources on AWS
+  homepage: https://registry.terraform.io/modules/tedilabs/secret/aws
+  visibility: public
+  topics:
+  - lang-hcl
+  - hcl2
+  - iac
+  - terraform
+  - terraform-module
+  - terraform-modules
+  - terraform-aws
+  - aws
+  - aws-kms
+  - aws-secrets-manager
+  - aws-ssm-parameter-store
+  - aws-parameter-store
   - devops
   - sre
   permissions:
