@@ -1,6 +1,6 @@
 module "webhook" {
   source  = "tedilabs/modules/github//modules/webhook"
-  version = "~> 0.7.0"
+  version = "~> 0.8.0"
 
   for_each = {
     for webhook in local.config.webhooks :

@@ -1,6 +1,6 @@
 module "team__primary" {
   source  = "tedilabs/modules/github//modules/org-team"
-  version = "~> 0.7.0"
+  version = "~> 0.8.0"
 
   for_each = {
     for team in local.config.teams.primary :
@@ -22,7 +22,7 @@ module "team__primary" {
 
 module "team__secondary" {
   source  = "tedilabs/modules/github//modules/org-team"
-  version = "~> 0.7.0"
+  version = "~> 0.8.0"
 
   for_each = {
     for team in local.config.teams.secondary :

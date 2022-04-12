@@ -4,7 +4,7 @@ locals {
 
 module "repository" {
   source  = "tedilabs/modules/github//modules/repository"
-  version = "~> 0.7.0"
+  version = "~> 0.8.0"
 
   for_each = {
     for repository in local.config.repositories :
@@ -23,9 +23,7 @@ module "repository" {
   template = try(each.value.template, {})
 
   features = try(each.value.features, ["ISSUES", "PROJECTS"])
-
-  merge_strategies       = try(each.value.merge_strategies, ["SQUASH", "REBASE"])
-  delete_branch_on_merge = try(each.value.delete_branch_on_merge, true)
+  vulnerability_alerts   = try(each.value.vulnerability_alerts, false)
 
   topics = concat(
     local.default_topics,
@@ -33,6 +31,23 @@ module "repository" {
   )
   issue_labels = try(each.value.issue_labels, [])
 
+
+  ## Branch
+  branches       = try(each.value.branches, [])
+  default_branch = try(each.value.default_branch, null)
+
+  merge_strategies       = try(each.value.merge_strategies, ["SQUASH", "REBASE"])
+  delete_branch_on_merge = try(each.value.delete_branch_on_merge, true)
+
+
+  ## GitHub Pages
+  pages_enabled       = try(each.value.pages.enabled, false)
+  pages_cname         = try(each.value.pages.cname, null)
+  pages_source_branch = try(each.value.pages.source.branch, "gh-pages")
+  pages_source_path   = try(each.value.pages.source.path, "/")
+
+
+  ## Access Control
   read_teams     = try(each.value.permissions.read.teams, [])
   triage_teams   = try(each.value.permissions.triage.teams, [])
   write_teams    = try(each.value.permissions.write.teams, [])
@@ -44,8 +59,6 @@ module "repository" {
   write_collaborators    = try(each.value.permissions.write.collaborators, [])
   maintain_collaborators = try(each.value.permissions.maintain.collaborators, [])
   admin_collaborators    = try(each.value.permissions.admin.collaborators, [])
-
-  default_branch = try(each.value.default_branch, null)
 
   deploy_keys = try(each.value.deploy_keys, [])
 }

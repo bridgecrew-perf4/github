@@ -1,6 +1,6 @@
 module "organization" {
   source  = "tedilabs/modules/github//modules/org-organization"
-  version = "~> 0.7.0"
+  version = "~> 0.8.0"
 
   for_each = {
     for organization in [local.config.organization] :
