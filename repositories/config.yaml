@@ -92,6 +92,8 @@ repositories:
     admin:
       teams:
       - chapter-infra
+      collaborators:
+      - tedilabs-dev
 - name: k8s-manifests
   description: ♥️  The best way to manage the kubernetes workloads in @tedilabs
   homepage: null
@@ -108,6 +110,8 @@ repositories:
     admin:
       teams:
       - chapter-infra
+      collaborators:
+      - tedilabs-dev
 
 ## Terraform Modules
 - name: terraform-aws-account
@@ -187,6 +191,27 @@ repositories:
   - terraform-aws
   - aws
   - aws-route53
+  - devops
+  - sre
+  permissions:
+    admin:
+      teams:
+      - chapter-infra
+- name: terraform-aws-firewall
+  description: 🌳 A sustainable Terraform Package which creates resources for Firewall Services on AWS
+  homepage: https://registry.terraform.io/modules/tedilabs/firewall/aws
+  visibility: public
+  topics:
+  - lang-hcl
+  - hcl2
+  - iac
+  - terraform
+  - terraform-module
+  - terraform-modules
+  - terraform-aws
+  - aws
+  - aws-firewall
+  - aws-waf
   - devops
   - sre
   permissions:
