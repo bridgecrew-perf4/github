@@ -197,6 +197,26 @@ repositories:
     admin:
       teams:
       - chapter-infra
+- name: terraform-aws-ec2
+  description: 🌳 A sustainable Terraform Package which creates resources for EC2 Services on AWS
+  homepage: https://registry.terraform.io/modules/tedilabs/ec2/aws
+  visibility: public
+  topics:
+  - lang-hcl
+  - hcl2
+  - iac
+  - terraform
+  - terraform-module
+  - terraform-modules
+  - terraform-aws
+  - aws
+  - aws-ec2
+  - devops
+  - sre
+  permissions:
+    admin:
+      teams:
+      - chapter-infra
 - name: terraform-aws-firewall
   description: 🌳 A sustainable Terraform Package which creates resources for Firewall Services on AWS
   homepage: https://registry.terraform.io/modules/tedilabs/firewall/aws
